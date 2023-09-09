@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Pet</title>
+</head>
+<body>
+    <h1>Virtual Pets</h1>
+    <h2>View all Virtual Pets</h2>
+
+    <table>
+        <tr>
+            <th>Pet Id</th>
+            <th>Pet Name</th>
+            <th>Pet Description</th>
+            <th>Hunger</th>
+            <th>Thirst</th>
+            <th>Boredom</th>
+        </tr>
+        <tr th:each = "p: ${pets}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.petName}"></td>
+            <td th:text="${p.petDesc}"></td>
+            <td th:text="${p.hunger}"></td>
+            <td th:text="${p.boredom}"></td>
+            <td th:text="${p.thirst}"></td>
+
+        </tr>
+    
+        
+    </table>
+
+</body>
+</html>
