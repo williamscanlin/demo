@@ -26,9 +26,26 @@
             <td th:text="${p.thirst}"></td>
 
         </tr>
-    
-        
     </table>
 
+    <h2>Add a Pet</h2>
+    <form action="/home" method="post">
+        Pet Name: <input type="text" name="petName"/><br><br>
+        Pet Description: <input type="text" name="petDesc"/><br><br>
+        <label for="hunger">Hunger:</label><br>
+        <input type="number" id="hunger" name="hunger"><br><br>
+        <label for="boredom">Boredom:</label><br>
+        <input type="number" id="boredom" name="boredom"><br><br>
+        <label for="thirst">Thirst:</label><br>
+        <input type="number" id="thirst" name="thirst"><br><br>
+
+        <button type="submit">Add a Pet</button>
+    </form>
+
+    <h2>Remove a Pet</h2>
+    <form action="/delete" method="post">
+        Pet Id you would like to delete: <input type="number" id="deleteId" name="deleteId"><br><br>
+        <button type="submit">Remove a Pet</button>
+    </form>
 </body>
 </html>

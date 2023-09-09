@@ -13,6 +13,8 @@ public class VirtualPet {
     private int boredom;
     private int thirst;
 
+    public VirtualPet(){}
+
     public VirtualPet(String petName, String petDesc,int hunger,int boredom,int thirst){
         this.petName = petName;
         this.petDesc = petDesc;
@@ -39,9 +41,4 @@ public class VirtualPet {
     public int getThirst(){
         return thirst;
     }
-
-
-
-    
 }
-

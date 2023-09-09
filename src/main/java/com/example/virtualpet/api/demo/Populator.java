@@ -4,8 +4,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Populator implments CommandLineRunner{
+public class Populator implements CommandLineRunner{
+
     private VirtualPetRepository petRepo;
+
     public Populator(VirtualPetRepository petRepo){
         this.petRepo = petRepo;
     }
