@@ -7,9 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		var context = new SpringApplicationBuilder(ProjectConfig.class).web(WebApplicationType.SERVLET).run(args);
-		
+	public static void main(String[]args){
+	var context = new SpringApplicationBuilder(ProjectConfig.class).web(WebApplicationType.SERVLET).run(args);
 	}
-
 }
