@@ -30,21 +30,21 @@
 
     <h2>Add a Pet</h2>
     <form action="/home" method="post">
-        Pet Name: <br><input type="text" name="petName"/><br><br>
-        Pet Description: <br><input type="text" name="petDesc"/><br><br>
+        Pet Name: <br><input type="text" name="petName" required/><br><br>
+        Pet Description: <br><input type="text" name="petDesc" required/><br><br>
         <label for="hunger">Hunger:</label><br>
-        <input type="number" id="hunger" name="hunger"> <br><br>
+        <input type="number" min="0" value="0" oninput="this.value=Math.abs(this.value)" id="hunger" name="hunger" required> <br><br>
         <label for="boredom">Boredom:</label><br>
-        <input type="number" id="boredom" name="boredom"><br><br>
+        <input type="number" min="0" value="0" oninput="this.value=Math.abs(this.value)" id="boredom" name="boredom" required><br><br>
         <label for="thirst">Thirst:</label><br>
-        <input type="number" id="thirst" name="thirst"><br><br>
+        <input type="number" min="0" value="0" oninput="this.value=Math.abs(this.value)" id="thirst" name="thirst" required><br><br>
 
         <button type="submit">Add a Pet</button>
     </form>
 
     <h2>Remove a Pet</h2>
     <form action="/delete" method="post">
-        Pet Id you would like to delete:<br> <input type="number" id="deleteId" name="deleteId"><br><br>
+        Pet Id you would like to delete:<br> <input type="number" min="0" oninput="this.value=Math.abs(this.value)" required id="deleteId" name="deleteId"><br><br>
         <button type="submit">Remove a Pet</button>
     </form>
 </body>
