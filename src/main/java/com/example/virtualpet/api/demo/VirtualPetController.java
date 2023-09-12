@@ -26,12 +26,12 @@ public class VirtualPetController {
 
     @PostMapping("/home")
     public String addPet(
-        @RequestParam String petName, 
+        @RequestParam String petName,
         @RequestParam String petDesc,
         @RequestParam int hunger,
         @RequestParam int boredom,
         @RequestParam int thirst,
-        Model page){ 
+        Model page){
             if(petName.isBlank() || petDesc.isBlank() || hunger == 0 || boredom == 0 || thirst == 0){
                 page.addAttribute("invalidInfo", "Please Enter correct information to add Pet");
                 return "errorAddPet.html";
